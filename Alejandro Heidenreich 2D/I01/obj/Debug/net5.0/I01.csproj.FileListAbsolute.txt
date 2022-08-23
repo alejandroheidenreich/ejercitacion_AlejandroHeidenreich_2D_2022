@@ -13,3 +13,4 @@ C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreic
 C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\obj\Debug\net5.0\ref\I01.dll
 C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\obj\Debug\net5.0\I01.pdb
 C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\obj\Debug\net5.0\I01.genruntimeconfig.cache
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\obj\Debug\net5.0\I01.csproj.AssemblyReference.cache

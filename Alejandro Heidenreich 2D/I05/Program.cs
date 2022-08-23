@@ -14,7 +14,7 @@ namespace I05
         {
             int limite;
             Console.WriteLine("Ingrese el limite de la busqueda");
-            while(!int.TryParse(Console.ReadLine(), out limite) || limite < 1)
+            while(!int.TryParse(Console.ReadLine(), out limite) || limite < 0)
             {
                 Console.WriteLine("Reingrese el limite de la busqueda");
             }

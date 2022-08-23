@@ -42,7 +42,7 @@ namespace I01
                 }
                 else
                 {
-                    Console.Write($"El dato ingresado en el puesto {i + 1} no es un numero");
+                    Console.WriteLine($"El dato ingresado en el puesto {i + 1} no es un numero");
                     contadorDeNoNumeros++;
                 }
 
