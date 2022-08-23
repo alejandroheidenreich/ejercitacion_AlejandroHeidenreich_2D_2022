@@ -7,8 +7,29 @@ namespace I02
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int numero;
+            string numeroCadena;
+            double resultadoDeOperacion;
+            string mensajeDeEntradaDeDatos = "Ingrese un numero";
+            bool validacionDelNumero = true;
 
+            while (validacionDelNumero)
+            {
+                Console.WriteLine(mensajeDeEntradaDeDatos);
+                numeroCadena = Console.ReadLine();
+                if (int.TryParse(numeroCadena, out numero))
+                {
+                    validacionDelNumero = false;
+                    resultadoDeOperacion = Math.Pow(numero, 2);
+                    Console.WriteLine($"{numero} elevado al cuadrado es: {resultadoDeOperacion}");
+                    resultadoDeOperacion = Math.Pow(numero, 3);
+                    Console.WriteLine($"{numero} elevado al cubo es: {resultadoDeOperacion}");
+                }
+                else
+                {
+                    mensajeDeEntradaDeDatos = "ERROR. ¡Reingresar número!";
+                }
+            } 
             
         }
     }
