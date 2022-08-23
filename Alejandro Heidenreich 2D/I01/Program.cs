@@ -10,10 +10,11 @@ namespace I01
         static void Main(string[] args)
         {
             int numero;
-            int maximo;
-            int minimo;
+            int maximo = 6;
+            int minimo = 9;
             string numeroStr;
             bool flag = true;
+
 
             for (int i = 0; i < 5; i++)
             {
@@ -46,10 +47,16 @@ namespace I01
                     Console.Write($"El dato ingresado en el puesto {i + 1} no es un numero");
                 }
 
-
             }
 
-            Console.Write($"El numero mayor es {maximo} {Environment.NewLine} El numero menor es {minimo}");
+            if (flag)
+            {
+                Console.Write($"No se ingresaron numeros");
+            }
+            else
+            {
+                Console.Write($"El numero mayor es {maximo} {Environment.NewLine} El numero menor es {minimo}");
+            }
         }
     }
 }

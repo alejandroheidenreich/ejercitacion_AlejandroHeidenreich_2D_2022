@@ -1,0 +1,15 @@
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\bin\Debug\net5.0\I01.exe
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\bin\Debug\net5.0\I01.deps.json
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\bin\Debug\net5.0\I01.runtimeconfig.json
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\bin\Debug\net5.0\I01.runtimeconfig.dev.json
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\bin\Debug\net5.0\I01.dll
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\bin\Debug\net5.0\ref\I01.dll
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\bin\Debug\net5.0\I01.pdb
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\obj\Debug\net5.0\I01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\obj\Debug\net5.0\I01.AssemblyInfoInputs.cache
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\obj\Debug\net5.0\I01.AssemblyInfo.cs
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\obj\Debug\net5.0\I01.csproj.CoreCompileInputs.cache
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\obj\Debug\net5.0\I01.dll
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\obj\Debug\net5.0\ref\I01.dll
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\obj\Debug\net5.0\I01.pdb
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\I01\obj\Debug\net5.0\I01.genruntimeconfig.cache
