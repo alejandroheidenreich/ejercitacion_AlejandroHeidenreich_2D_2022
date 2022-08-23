@@ -17,7 +17,7 @@ namespace I02
             {
                 Console.WriteLine(mensajeDeEntradaDeDatos);
                 numeroCadena = Console.ReadLine();
-                if (int.TryParse(numeroCadena, out numero))
+                if (int.TryParse(numeroCadena, out numero) && numero > 0)
                 {
                     validacionDelNumero = false;
                     resultadoDeOperacion = Math.Pow(numero, 2);
@@ -27,7 +27,7 @@ namespace I02
                 }
                 else
                 {
-                    mensajeDeEntradaDeDatos = "ERROR. ¡Reingresar número!";
+                    mensajeDeEntradaDeDatos = "ERROR. ¡Reingresar número mayor a cero!";
                 }
             } 
             

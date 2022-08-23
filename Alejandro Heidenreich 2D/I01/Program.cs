@@ -28,23 +28,17 @@ namespace I01
                 if (int.TryParse(numeroStr, out numeroIngresado))
                 {
                     acumuladorNumeros += numeroIngresado;
-                    if (banderaPrimeroNumero)
+           
+                    if (banderaPrimeroNumero || numeroIngresado > maximo)
                     {
                         maximo = numeroIngresado;
-                        minimo = numeroIngresado;
-                        banderaPrimeroNumero = false;
                     }
-                    else
+                    if (banderaPrimeroNumero || numeroIngresado < minimo)
                     {
-                        if (numeroIngresado > maximo)
-                        {
-                            maximo = numeroIngresado;
-                        }
-                        if (numeroIngresado < minimo)
-                        {
-                            minimo = numeroIngresado;
-                        }
+                        minimo = numeroIngresado;
                     }
+
+                    banderaPrimeroNumero = false;
                 }
                 else
                 {
