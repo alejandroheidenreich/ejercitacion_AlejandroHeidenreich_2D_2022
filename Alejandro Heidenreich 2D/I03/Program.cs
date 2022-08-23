@@ -21,14 +21,11 @@ namespace I03
             int numero;
             string mensajeDeEntradaDeDatos = "Ingrese un numero";
             bool vaildacionNumeroIngresado = true;
-            int contadorDeRestosCero;
-
 
             while (respuestaParaContinuar != "salir")
             {
                 do
-                {
-                    
+                { 
                     Console.WriteLine(mensajeDeEntradaDeDatos);
                     numeroCadenaIngresado = Console.ReadLine();
 
@@ -38,15 +35,7 @@ namespace I03
                         vaildacionNumeroIngresado = true;
                         for (int i = 2; i < numero; i++)
                         {
-                            contadorDeRestosCero = 0;
-                            for (int j = 2; j <= i; j++)
-                            {
-                                if (i % j == 0)
-                                {
-                                    contadorDeRestosCero += 1;
-                                }
-                            }
-                            if (contadorDeRestosCero == 1)
+                            if (EsPrimo(i))
                             {
                                 Console.WriteLine($"{i} es primo");
                             }                         
@@ -67,6 +56,33 @@ namespace I03
                 respuestaParaContinuar = Console.ReadLine();
             }
         }
-    }
+
+        static bool EsPrimo(int numero)
+        {
+            int contadorDeRestosCero = 0;
+            bool esPrimo = false;
+
+            for (int i = 2; i <= numero; i++)
+            {
+                if (numero % i == 0)
+                {
+                    contadorDeRestosCero++;
+
+                }
+                if (contadorDeRestosCero > 1)
+                {
+                    break;
+                }
+            }
+
+            if (contadorDeRestosCero == 1)
+            {
+                esPrimo = true;
+            }
+     
+            return esPrimo;
+
+        }
+    } 
 }
 
