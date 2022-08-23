@@ -16,21 +16,42 @@ namespace I04
     {
         static void Main(string[] args)
         {
-            int numero;
-            bool validacionNumero;
-            string mensajeDeEntradaNumero = "Ingrese un numero";
             int contadorDeNumerosPerfectos = 0;
+            int numeroEntero = 1;
 
-            do
+            Console.WriteLine("Lista de numeros Perfectos");
+            while (contadorDeNumerosPerfectos < 4)
             {
-                Console.WriteLine(mensajeDeEntradaNumero);
-                
-            } while (int.TryParse(Console.ReadLine(), out numero)) ;
+                if (EsPerfecto(numeroEntero))
+                {
+                    contadorDeNumerosPerfectos++;
+                    Console.WriteLine(numeroEntero);
+                }
+                numeroEntero++;
+            }
+        }
 
+        static bool EsDivisor (int numero, int divisor)
+        {
+            return divisor != 0 && numero % divisor == 0;
+        }
 
-
-
-
+        static bool EsPerfecto (int numero)
+        {
+            int acumuladorDeDivisores = 0;
+            bool esPerfecto = false;
+            for (int i = 1; i < numero; i++)
+            {
+                if (EsDivisor(numero,i))
+                {
+                    acumuladorDeDivisores += i;
+                }
+            }
+            if (acumuladorDeDivisores == numero)
+            {
+                esPerfecto = true;
+            }
+            return esPerfecto;
         }
     }
 }
