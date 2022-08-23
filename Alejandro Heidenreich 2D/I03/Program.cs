@@ -29,7 +29,7 @@ namespace I03
                     Console.WriteLine(mensajeDeEntradaDeDatos);
                     numeroCadenaIngresado = Console.ReadLine();
 
-                    if (int.TryParse(numeroCadenaIngresado, out numero))
+                    if (int.TryParse(numeroCadenaIngresado, out numero) && numero > 0)
                     {
                         mensajeDeEntradaDeDatos = "Ingrese un numero";
                         vaildacionNumeroIngresado = true;
@@ -43,7 +43,7 @@ namespace I03
                     }
                     else
                     {
-                        mensajeDeEntradaDeDatos = "ERROR. ¡Reingresar número! o Escriba (salir)";
+                        mensajeDeEntradaDeDatos = "ERROR. ¡Reingresar número positivo! o Escriba (salir)";
                         vaildacionNumeroIngresado = false;
                         if (numeroCadenaIngresado == "salir")
                         {
@@ -59,27 +59,17 @@ namespace I03
 
         static bool EsPrimo(int numero)
         {
-            int contadorDeRestosCero = 0;
-            bool esPrimo = false;
+            bool esPrimo = true;
 
-            for (int i = 2; i <= numero; i++)
+            for (int i = 2; i < numero; i++)
             {
                 if (numero % i == 0)
                 {
-                    contadorDeRestosCero++;
-
-                }
-                if (contadorDeRestosCero > 1)
-                {
+                    esPrimo = false;
                     break;
                 }
             }
 
-            if (contadorDeRestosCero == 1)
-            {
-                esPrimo = true;
-            }
-     
             return esPrimo;
 
         }
