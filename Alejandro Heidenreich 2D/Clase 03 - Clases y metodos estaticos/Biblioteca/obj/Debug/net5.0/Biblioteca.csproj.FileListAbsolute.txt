@@ -1,0 +1,24 @@
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Biblioteca\obj\Debug\net5.0\Biblioteca.csproj.AssemblyReference.cache
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Biblioteca\obj\Debug\net5.0\Biblioteca.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Biblioteca\obj\Debug\net5.0\Biblioteca.AssemblyInfoInputs.cache
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Biblioteca\obj\Debug\net5.0\Biblioteca.AssemblyInfo.cs
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Biblioteca\obj\Debug\net5.0\Biblioteca.csproj.CoreCompileInputs.cache
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Biblioteca\bin\Debug\net5.0\Biblioteca.deps.json
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Biblioteca\bin\Debug\net5.0\Biblioteca.dll
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Biblioteca\bin\Debug\net5.0\ref\Biblioteca.dll
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Biblioteca\bin\Debug\net5.0\Biblioteca.pdb
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Biblioteca\obj\Debug\net5.0\Biblioteca.dll
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Biblioteca\obj\Debug\net5.0\ref\Biblioteca.dll
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Biblioteca\obj\Debug\net5.0\Biblioteca.pdb
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Clase 03 - Clases y metodos estaticos\Biblioteca\bin\Debug\net5.0\Biblioteca.deps.json
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Clase 03 - Clases y metodos estaticos\Biblioteca\bin\Debug\net5.0\Biblioteca.dll
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Clase 03 - Clases y metodos estaticos\Biblioteca\bin\Debug\net5.0\ref\Biblioteca.dll
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Clase 03 - Clases y metodos estaticos\Biblioteca\bin\Debug\net5.0\Biblioteca.pdb
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Clase 03 - Clases y metodos estaticos\Biblioteca\obj\Debug\net5.0\Biblioteca.csproj.AssemblyReference.cache
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Clase 03 - Clases y metodos estaticos\Biblioteca\obj\Debug\net5.0\Biblioteca.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Clase 03 - Clases y metodos estaticos\Biblioteca\obj\Debug\net5.0\Biblioteca.AssemblyInfoInputs.cache
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Clase 03 - Clases y metodos estaticos\Biblioteca\obj\Debug\net5.0\Biblioteca.AssemblyInfo.cs
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Clase 03 - Clases y metodos estaticos\Biblioteca\obj\Debug\net5.0\Biblioteca.csproj.CoreCompileInputs.cache
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Clase 03 - Clases y metodos estaticos\Biblioteca\obj\Debug\net5.0\Biblioteca.dll
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Clase 03 - Clases y metodos estaticos\Biblioteca\obj\Debug\net5.0\ref\Biblioteca.dll
+C:\Users\heide\Desktop\UTN\SEGUNDO\PROGRAMACION\ejercitacion_AlejandroHeidenreich_2D_2022\Alejandro Heidenreich 2D\Clase 03 - Clases y metodos estaticos\Biblioteca\obj\Debug\net5.0\Biblioteca.pdb
