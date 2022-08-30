@@ -17,6 +17,7 @@ namespace I03_Universal
             alumnoTres.SetNotaPrimerParcial(2);
             alumnoTres.SetNotaSegundoParcial(3);
 
+
             Console.WriteLine(alumnoUno.Mostrar());
             Console.WriteLine(alumnoDos.Mostrar());
             Console.WriteLine(alumnoTres.Mostrar());
