@@ -6,9 +6,9 @@ namespace Cuantas_Primaveras_Ejercicio_I02
     {
         static void Main(string[] args)
         {
-            Persona personaUno = new Persona("Roberto",10,10,1989,"11598751");
-            Persona personaDos = new Persona("Raul",28,08,1989,"10107833");
-            Persona personaTres = new Persona("Raul",06,03,2010,"52366012");
+            Persona personaUno = new Persona("Roberto", 10, 10, 1989, "11598751");
+            Persona personaDos = new Persona("Raul", 28, 08, 1989, "10107833");
+            Persona personaTres = new Persona("Raul", 06, 03, 2010, "52366012");
 
             Console.WriteLine(personaUno.CalcularEdad());
             Console.WriteLine(personaDos.CalcularEdad());

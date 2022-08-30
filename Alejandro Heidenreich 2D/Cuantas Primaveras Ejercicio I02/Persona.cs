@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace Cuantas_Primaveras_Ejercicio_I02
 {
-    public class Persona
+    internal class Persona
     {
         public string nombre;
         public DateTime fechaDeNacimiento;
         public string dni;
 
-        public Persona(string nombre,int dia, int mes, int año,string dni)
+        public Persona(string nombre, int dia, int mes, int año, string dni)
         {
             this.nombre = nombre;
             SetNacimiento(dia, mes, año);
-            this.dni = dni; 
+            this.dni = dni;
         }
 
         public string GetNombre()
@@ -74,13 +74,10 @@ namespace Cuantas_Primaveras_Ejercicio_I02
             string respuesta = "Es mayor de edad";
             if (this.CalcularEdad() < 17)
             {
-               respuesta = "Es menor";
+                respuesta = "Es menor";
             }
 
             return respuesta;
         }
-
     }
-
-   
 }
