@@ -1,6 +1,6 @@
 ﻿//Escribir un programa que imprima por consola un triángulo como el siguiente:
 
-//*
+//*         
 //***
 //*****
 //*******

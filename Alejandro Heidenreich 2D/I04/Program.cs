@@ -16,6 +16,7 @@ namespace I04
     {
         static void Main(string[] args)
         {
+
             int contadorDeNumerosPerfectos = 0;
             int numeroEntero = 1;
 

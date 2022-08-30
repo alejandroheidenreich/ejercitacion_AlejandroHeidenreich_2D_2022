@@ -55,7 +55,7 @@ namespace I09
             return baseTriangulo;
         }
 
-        static string CalcularLinea (int baseTriangulo, int linea,char simbolo)
+        static string CalcularLinea (int baseTriangulo, int linea, char simbolo)
         {
             int cantidadDeEspaciados = (baseTriangulo - linea)/2;
             int cantidadLineaTotal = baseTriangulo - cantidadDeEspaciados;
@@ -82,7 +82,7 @@ namespace I09
             string lineaStr;
             for (int i = altura; i > 0; i--)
             {
-                lineaStr = CalcularLinea(baseTriangulo,lineaLargo, simbolo);
+                lineaStr = CalcularLinea(baseTriangulo, lineaLargo, simbolo);
                 sb.Insert(0, lineaStr + Environment.NewLine);
                 lineaLargo -= 2;
             }
