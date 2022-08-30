@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Cuantas_Primaveras_Ejercicio_I02
+namespace Ejercicio_I02
 {
     internal class Program
     {

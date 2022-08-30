@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cuantas_Primaveras_Ejercicio_I02
+namespace Ejercicio_I02
 {
-    internal class Persona
+    public class Persona
     {
         public string nombre;
         public DateTime fechaDeNacimiento;

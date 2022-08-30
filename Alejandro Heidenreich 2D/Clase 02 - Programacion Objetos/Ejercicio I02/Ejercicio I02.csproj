@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Cuantas_Primaveras_Ejercicio_I02</RootNamespace>
+    <RootNamespace>Ejercicio_I02</RootNamespace>
   </PropertyGroup>
 
 </Project>

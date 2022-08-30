@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clase 01 - Introduccion a .NET y C Sharp", "Clase 01 - Introduccion a .NET y C Sharp", "{216354BB-899E-44C8-A17C-03EA5C544B6D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clase 02 - Programacion Orientada a Objetos", "Clase 02 - Programacion Orientada a Objetos", "{AF439AE2-95A9-4C0E-B389-96F21D0F19C6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clase 02 - Programacion Objetos", "Clase 02 - Programacion Objetos", "{AF439AE2-95A9-4C0E-B389-96F21D0F19C6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clase 03 - Clases y metodos estaticos", "Clase 03 - Clases y metodos estaticos", "{D09B4A91-6F43-445E-BF7F-DD264F88BADF}"
 EndProject
@@ -35,11 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejercicio I02", "Clase 03 -
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ejercicio A01", "Ejercicio A01", "{44AB2CB7-E71A-44DC-9F61-B2260AC023EC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prestamo Ejercicio I01", "Clase 02 - Programacion Orientada a Objetos\Prestamo Ejercicio I01\Prestamo Ejercicio I01.csproj", "{0DEAB904-EB3C-4886-8D22-499A3F351475}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factorial", "Clase 03 - Clases y metodos estaticos\Factorial\Factorial.csproj", "{20788C8D-DDAC-45BA-AD2C-2F358675CDC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cuantas Primaveras Ejercicio I02", "Cuantas Primaveras Ejercicio I02\Cuantas Primaveras Ejercicio I02.csproj", "{F20E42F2-154E-4C5A-9412-F0C30F0CC032}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio I02", "Clase 02 - Programacion Objetos\Ejercicio I02\Ejercicio I02.csproj", "{CD930558-33A9-4C99-A888-52079D1F4698}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prestamo Ejercicio I01", "Clase 02 - Programacion Objetos\Prestamo Ejercicio I01\Prestamo Ejercicio I01.csproj", "{E377F7E2-48F9-4E39-B0A0-528EDB311D93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,18 +87,18 @@ Global
 		{E9040EB5-D008-405B-85C9-7EA28F74EB13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9040EB5-D008-405B-85C9-7EA28F74EB13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9040EB5-D008-405B-85C9-7EA28F74EB13}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0DEAB904-EB3C-4886-8D22-499A3F351475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0DEAB904-EB3C-4886-8D22-499A3F351475}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0DEAB904-EB3C-4886-8D22-499A3F351475}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0DEAB904-EB3C-4886-8D22-499A3F351475}.Release|Any CPU.Build.0 = Release|Any CPU
 		{20788C8D-DDAC-45BA-AD2C-2F358675CDC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{20788C8D-DDAC-45BA-AD2C-2F358675CDC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20788C8D-DDAC-45BA-AD2C-2F358675CDC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20788C8D-DDAC-45BA-AD2C-2F358675CDC9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F20E42F2-154E-4C5A-9412-F0C30F0CC032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F20E42F2-154E-4C5A-9412-F0C30F0CC032}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F20E42F2-154E-4C5A-9412-F0C30F0CC032}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F20E42F2-154E-4C5A-9412-F0C30F0CC032}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD930558-33A9-4C99-A888-52079D1F4698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD930558-33A9-4C99-A888-52079D1F4698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD930558-33A9-4C99-A888-52079D1F4698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD930558-33A9-4C99-A888-52079D1F4698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E377F7E2-48F9-4E39-B0A0-528EDB311D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E377F7E2-48F9-4E39-B0A0-528EDB311D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E377F7E2-48F9-4E39-B0A0-528EDB311D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E377F7E2-48F9-4E39-B0A0-528EDB311D93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -117,9 +117,9 @@ Global
 		{F6E3F3FF-5002-447E-8E33-B343974571FD} = {5CEB3735-B374-4ACA-9CF0-794B15C8F20A}
 		{E9040EB5-D008-405B-85C9-7EA28F74EB13} = {AA95449B-6FA2-42DF-B75A-5798BB370634}
 		{44AB2CB7-E71A-44DC-9F61-B2260AC023EC} = {D09B4A91-6F43-445E-BF7F-DD264F88BADF}
-		{0DEAB904-EB3C-4886-8D22-499A3F351475} = {AF439AE2-95A9-4C0E-B389-96F21D0F19C6}
 		{20788C8D-DDAC-45BA-AD2C-2F358675CDC9} = {44AB2CB7-E71A-44DC-9F61-B2260AC023EC}
-		{F20E42F2-154E-4C5A-9412-F0C30F0CC032} = {AF439AE2-95A9-4C0E-B389-96F21D0F19C6}
+		{CD930558-33A9-4C99-A888-52079D1F4698} = {AF439AE2-95A9-4C0E-B389-96F21D0F19C6}
+		{E377F7E2-48F9-4E39-B0A0-528EDB311D93} = {AF439AE2-95A9-4C0E-B389-96F21D0F19C6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {893D27F8-338D-4FDF-A6B5-7BC17792CE6C}
