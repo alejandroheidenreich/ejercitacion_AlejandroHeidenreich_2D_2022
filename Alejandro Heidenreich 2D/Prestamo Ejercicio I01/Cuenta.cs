@@ -8,8 +8,8 @@ namespace Prestamo_Ejercicio_I01
 {
     public class Cuenta
     {
-        string titular;
-        double cantidad;
+        public string titular;
+        public double cantidad;
 
         public Cuenta(string titular, double cantidad)
         {
