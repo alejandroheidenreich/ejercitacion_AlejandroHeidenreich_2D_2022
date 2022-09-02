@@ -8,30 +8,19 @@ namespace Interfaz
 {
     internal class Auto
     {
-        public enum EMarca
-        {
-            Chevrolet, Fiat, Ford, Renault, Toyota, Honda, BMW, Audi, MercedezBenz
-        }
-
-        private EMarca marca;
-        private string modelo;
-        private string patente;
-        private ConsoleColor color;
+        private string descripcion;
         private bool importado;
         private double precioBase;
         private bool tipoDeNieve;
-        private int año;
+        private int ano;
 
-        public Auto(EMarca marca,string patente, ConsoleColor color, bool importado, double precio, bool tipoDeNieve, string modelo, int año)
+        public Auto(string descripcion, bool importado, double precioBase, bool tipoDeNieve, int ano)
         {
-            this.marca = marca;
-            this.color = color;
+            this.descripcion = descripcion;
             this.importado = importado;
-            this.precioBase = precio;
+            this.precioBase = precioBase;
             this.tipoDeNieve = tipoDeNieve;
-            this.modelo = modelo;
-            this.año = año;
-            this.patente = patente;
+            this.ano = ano;
         }
 
         public bool Importado
@@ -43,12 +32,22 @@ namespace Interfaz
         {
             get { return this.precioBase; }
         }
-        public string MostrarDatosDelAuto(Auto autoAMostrar)
+
+        public int Ano
+        {
+            get { return this.ano; }
+        }
+
+        public bool TipoDeNieve
+        {
+            get { return this.tipoDeNieve; }
+        }
+
+        public static string MostrarDatosDelAuto(Auto autoAMostrar)
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($"Marca: {autoAMostrar.marca}");
-            sb.Append($"Modelo: {autoAMostrar.modelo}");
+            sb.AppendLine($"Marca: {autoAMostrar.descripcion}"); 
             if (autoAMostrar.importado)
             {
                 sb.AppendLine(" - Importado");
@@ -57,8 +56,7 @@ namespace Interfaz
             {
                 sb.AppendLine();
             }
-            sb.AppendLine($"Año: {autoAMostrar.año}");
-            sb.AppendLine($"Color: {autoAMostrar.color}");
+            sb.AppendLine($"Año: {autoAMostrar.ano}");
             sb.AppendLine($"Precio: {autoAMostrar.precioBase}");
  
             return sb.ToString();
@@ -66,7 +64,7 @@ namespace Interfaz
 
         public static bool operator ==(Auto autoUno, Auto autoDos)
         {
-            return autoUno.patente == autoDos.patente;
+            return autoUno.descripcion == autoDos.descripcion;
         }
 
         public static bool operator !=(Auto autoUno, Auto autoDos)
@@ -76,12 +74,12 @@ namespace Interfaz
         public override bool Equals(object obj)
         {
             Auto auto = obj as Auto;
-            return auto != null && (auto.patente == this.patente);
+            return auto != null && (auto.descripcion == this.descripcion);
         }
 
         public override int GetHashCode()
         {
-            return patente.GetHashCode();
+            return descripcion.GetHashCode();
         }
     }
 }

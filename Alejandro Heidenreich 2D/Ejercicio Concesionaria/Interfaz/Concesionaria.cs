@@ -14,25 +14,27 @@ namespace Interfaz
         private string numeroDeTelefono;
         private double gananciaTotal;
         private List<Auto> autos;
-        private Gerente gerenteDeSucursal;
+        private string nombreDeGerente;
+        private double gananciaDeGerente;
 
         public Concesionaria()
         {
             this.autos = new List<Auto>();
         }
-        public Concesionaria(string ubicacion, int capacidadMaximaDeAutos, Gerente gerente):this()
+
+        public Concesionaria(string ubicacion, int capacidadMaximaDeAutos, string nombreDeGerente, List<Auto> autos) :this()
         {
             this.ubicacion = ubicacion;
             this.capacidadMaximaDeAutos = capacidadMaximaDeAutos;
-            this.gerenteDeSucursal = gerente;
-        }
-        public Concesionaria(string ubicacion, int capacidadMaximaDeAutos, Gerente gerente, string numeroDeTelefono, List<Auto> autos) :this(ubicacion,capacidadMaximaDeAutos,gerente)
-        {
-            this.numeroDeTelefono = numeroDeTelefono;
+            this.nombreDeGerente = nombreDeGerente;
             this.autos = autos;
         }
 
-        
+
+        public string NumeroDeTelefono{
+            set { this.numeroDeTelefono = value; }
+        }
+
         public bool AgregarAuto (Auto autoAAgregar)
         {
             bool agregado = false;
@@ -61,7 +63,8 @@ namespace Interfaz
             }
             return indiceDelAuto;
         }
-        public void VenderAuto (Auto autoAVender)
+
+        private void VenderAuto (Auto autoAVender)
         {
             int indiceDelAuto = EncontrarAutoPorIndice(autoAVender);
             double facturacion;
@@ -74,7 +77,8 @@ namespace Interfaz
                     facturacion *= 1.18;
                 }
                 this.gananciaTotal += facturacion * .99;
-                this.gerenteDeSucursal.Ganacia = facturacion * .01;
+                this.gananciaDeGerente = facturacion * .01;
+                EliminarAuto(autoAVender);
             }
         }
 
@@ -89,6 +93,32 @@ namespace Interfaz
                 eliminado = true;
             }
             return eliminado;
+        }
+
+        public void MostrarListaDeAutos()
+        {
+            foreach (Auto item in this.autos)
+            {
+                Console.WriteLine(Auto.MostrarDatosDelAuto(item));
+            }
+        }
+
+        public void VenderAutosMayoresCincoAnos(Auto autoAVender)
+        {
+            int anoActual = DateTime.Now.Year;
+
+            if ((anoActual-autoAVender.Ano) < 6)
+            {
+                VenderAuto(autoAVender);
+            }
+        }
+
+        public void VenderAutosConRuedasNieve(Auto autoAVender)
+        {
+            if ( autoAVender.TipoDeNieve)
+            {
+                VenderAuto(autoAVender);
+            }
         }
     }
 }
