@@ -82,7 +82,10 @@ namespace Interfaz
 
         public override int GetHashCode()
         {
-            return descripcion.GetHashCode();
+            return descripcion.GetHashCode()
+                    +importado.GetHashCode()
+                    +ano.GetHashCode()
+                    +precioBase.GetHashCode();
         }
     }
 }
