@@ -43,24 +43,26 @@ namespace Interfaz
             this.numeroDeTelefono = numeroDeTelefono;
         }
 
-        public string NumeroDeTelefono{
+        public string NumeroDeTelefono
+        {
             set { this.numeroDeTelefono = value; }
         }
 
-        public List<Auto> Autos { 
+        public List<Auto> Autos
+        { 
             get { return autos; } 
         }
 
         public double GananciaTotal { get => gananciaTotal; }
         public double GananciaDeGerente { get => gananciaDeGerente; }
 
-        public bool AgregarAuto (Auto autoAAgregar)
+        public bool AgregarAuto(Auto autoAAgregar)
         {
             bool agregado = false;
 
             if (autoAAgregar is not null && this.autos.Count < this.capacidadMaximaDeAutos)
             {
-                if (FiltrarAutosMayoresCincoAnos(autoAAgregar,5) && ((this.ubicacion == EUbicaicon.Ushuaia && autoAAgregar.TipoDeNieve) || this.ubicacion != EUbicaicon.Ushuaia))
+                if (CondicionarAccionAuto(autoAAgregar))
                 {
                     this.autos.Add(autoAAgregar);
                     agregado = true;
@@ -73,15 +75,15 @@ namespace Interfaz
         {
             bool encontrado = false;
 
-                foreach (Auto item in this.autos)
+            foreach (Auto item in this.autos)
+            {
+                if (item == autoABuscar)
                 {
-                    if (item == autoABuscar)
-                    {
-                        encontrado = true;
-                        break;
-                    }
-                
+                    encontrado = true;
+                    break;
                 }
+                
+            }
             return encontrado;
         }
 
@@ -97,16 +99,14 @@ namespace Interfaz
                     break;
                 }
             }
-
             return encontrado;
         }
         public bool VenderAuto(Auto autoAVender)
         {
-            bool encontroAuto = EncontrarAuto(autoAVender);
             double facturacion;
             bool vendido = false;
 
-            if (encontroAuto && FiltrarAutosMayoresCincoAnos(autoAVender,5))
+            if (EncontrarAuto(autoAVender) && CondicionarAccionAuto(autoAVender))
             {
                 facturacion = autoAVender.PrecioBase;
                 if (autoAVender.Importado)
@@ -115,8 +115,7 @@ namespace Interfaz
                 }
                 this.gananciaTotal += facturacion * .99;
                 this.gananciaDeGerente += facturacion * .01;
-                EliminarAuto(autoAVender);
-                vendido = true;
+                vendido = EliminarAuto(autoAVender);
             }
 
             return vendido;
@@ -147,7 +146,7 @@ namespace Interfaz
             return sb.ToString();
         }
 
-        public bool FiltrarAutosMayoresCincoAnos(Auto auto, int limite)
+        private bool FiltrarAutosMayoresCincoAnos(Auto auto, int limite)
         {
             int anoActual = DateTime.Now.Year;
             bool filtrado = false;
@@ -157,6 +156,11 @@ namespace Interfaz
                 filtrado = true;
             }
             return filtrado;
+        }
+
+        private bool CondicionarAccionAuto(Auto autoACondicionar)
+        {
+            return FiltrarAutosMayoresCincoAnos(autoACondicionar, 5) && ((this.ubicacion == EUbicaicon.Ushuaia && autoACondicionar.TipoDeNieve) || this.ubicacion != EUbicaicon.Ushuaia);
         }
 
         public string MostrarDatosConcesionaria()
