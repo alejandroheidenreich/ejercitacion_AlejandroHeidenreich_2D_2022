@@ -651,15 +651,15 @@ namespace Interfaz
                             + "**********************************************\n\n"
                             + sucursalUshuaia.MostrarDatosConcesionaria());
 
-            //List<Auto> listaBA = sucursalBuenosAires.Autos;
-            //List<Auto> listaUSH = sucursalUshuaia.Autos;
+            List<Auto> listaBA = sucursalBuenosAires.Autos;
+            List<Auto> listaUSH = sucursalUshuaia.Autos;
 
-            //sucursalBuenosAires.VenderAuto(listaBA[5]);
-            //sucursalUshuaia.VenderAuto(listaUSH[3]);
+            sucursalBuenosAires.VenderAuto(listaBA[5]);
+            sucursalUshuaia.VenderAuto(listaUSH[3]);
 
-            //Console.WriteLine(sucursalBuenosAires.MostrarDatosConcesionaria()
-            //                + "**********************************************\n\n"
-            //                + sucursalUshuaia.MostrarDatosConcesionaria());
+            Console.WriteLine(sucursalBuenosAires.MostrarDatosConcesionaria()
+                            + "**********************************************\n\n"
+                            + sucursalUshuaia.MostrarDatosConcesionaria());
         }
     }
 }

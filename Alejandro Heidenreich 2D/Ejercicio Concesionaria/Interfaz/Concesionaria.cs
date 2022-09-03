@@ -83,6 +83,21 @@ namespace Interfaz
             return encontrado;
         }
 
+        private int EncontrarAutoPorIndice(Auto autoABuscar)
+        {
+            int encontrado = -1;
+
+            for (int i = 0; i < this.autos.Count; i++)
+            {
+                if (this.autos[i] == autoABuscar)
+                {
+                    encontrado = i;
+                    break;
+                }
+            }
+
+            return encontrado;
+        }
         public bool VenderAuto(Auto autoAVender)
         {
             bool encontroAuto = EncontrarAuto(autoAVender);
@@ -108,10 +123,11 @@ namespace Interfaz
         public bool EliminarAuto(Auto autoAEliminar)
         {
             bool eliminado = false;
-  
-            if (EncontrarAuto(autoAEliminar))
+            int indice = EncontrarAutoPorIndice(autoAEliminar);
+
+            if (indice != -1)
             {
-                this.autos.Remove(autoAEliminar);
+                this.autos.RemoveAt(indice);
                 eliminado = true;
             }
             return eliminado;
