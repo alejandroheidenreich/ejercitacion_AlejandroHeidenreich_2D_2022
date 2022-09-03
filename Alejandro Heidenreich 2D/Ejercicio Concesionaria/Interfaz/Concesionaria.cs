@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -7,9 +8,15 @@ using System.Threading.Tasks;
 
 namespace Interfaz
 {
+    public enum EUbicaicon
+    {
+        Buenos_Aires, Ushuaia
+    }
+
     internal class Concesionaria
     {
-        private string ubicacion;
+        
+        private EUbicaicon ubicacion;
         private int capacidadMaximaDeAutos;
         private string numeroDeTelefono;
         private double gananciaTotal;
@@ -22,54 +29,67 @@ namespace Interfaz
             this.autos = new List<Auto>();
         }
 
-        public Concesionaria(string ubicacion, int capacidadMaximaDeAutos, string nombreDeGerente, List<Auto> autos) :this()
+        public Concesionaria(EUbicaicon ubicacion, int capacidadMaximaDeAutos, string nombreDeGerente) :this()
         {
             this.ubicacion = ubicacion;
             this.capacidadMaximaDeAutos = capacidadMaximaDeAutos;
             this.nombreDeGerente = nombreDeGerente;
-            this.autos = autos;
         }
 
+        public Concesionaria(EUbicaicon ubicacion, int capacidadMaximaDeAutos, string nombreDeGerente, string numeroDeTelefono):this(ubicacion, capacidadMaximaDeAutos,nombreDeGerente)
+        {
+            this.numeroDeTelefono = numeroDeTelefono;
+        }
 
         public string NumeroDeTelefono{
             set { this.numeroDeTelefono = value; }
         }
 
+        public List<Auto> Autos { 
+            get { return autos; } 
+        }
+
+        public double GananciaTotal { get => gananciaTotal; }
+        public double GananciaDeGerente { get => gananciaDeGerente; }
+
         public bool AgregarAuto (Auto autoAAgregar)
         {
             bool agregado = false;
-            if (autoAAgregar != null && this.autos.Count < this.capacidadMaximaDeAutos)
+
+            if (autoAAgregar is not null && this.autos.Count < this.capacidadMaximaDeAutos)
             {
-                agregado = true;
-                this.autos.Add(autoAAgregar);
+                if (FiltrarAutosMayoresCincoAnos(autoAAgregar,5) && ((this.ubicacion == EUbicaicon.Ushuaia && autoAAgregar.TipoDeNieve) || this.ubicacion != EUbicaicon.Ushuaia))
+                {
+                    this.autos.Add(autoAAgregar);
+                    agregado = true;
+                }
             }
             return agregado;
         }
 
-        private int EncontrarAutoPorIndice(Auto autoABuscar)
+        private bool EncontrarAuto(Auto autoABuscar)
         {
-            int indiceDelAuto = -1;
+            bool encontrado = false;
 
-            if (autoABuscar != null)
-            {
-                for (int i = 0; i < this.autos.Count; i++)
+                foreach (Auto item in this.autos)
                 {
-                    if (this.autos[i] == autoABuscar)
+                    if (item == autoABuscar)
                     {
-                        indiceDelAuto = i;
+                        encontrado = true;
                         break;
                     }
+                
                 }
-            }
-            return indiceDelAuto;
+            return encontrado;
         }
 
-        private void VenderAuto (Auto autoAVender)
+        public bool VenderAuto(Auto autoAVender)
         {
-            int indiceDelAuto = EncontrarAutoPorIndice(autoAVender);
+            bool encontroAuto = EncontrarAuto(autoAVender);
             double facturacion;
+            bool vendido = false;
 
-            if (indiceDelAuto != -1)
+            if (encontroAuto && FiltrarAutosMayoresCincoAnos(autoAVender,5))
             {
                 facturacion = autoAVender.PrecioBase;
                 if (autoAVender.Importado)
@@ -77,17 +97,19 @@ namespace Interfaz
                     facturacion *= 1.18;
                 }
                 this.gananciaTotal += facturacion * .99;
-                this.gananciaDeGerente = facturacion * .01;
+                this.gananciaDeGerente += facturacion * .01;
                 EliminarAuto(autoAVender);
+                vendido = true;
             }
+
+            return vendido;
         }
 
         public bool EliminarAuto(Auto autoAEliminar)
         {
             bool eliminado = false;
-            int indiceDelAuto = EncontrarAutoPorIndice(autoAEliminar);
-
-            if (indiceDelAuto != -1)
+  
+            if (EncontrarAuto(autoAEliminar))
             {
                 this.autos.Remove(autoAEliminar);
                 eliminado = true;
@@ -95,30 +117,45 @@ namespace Interfaz
             return eliminado;
         }
 
-        public void MostrarListaDeAutos()
+        public string MostrarListaDeAutos()
         {
+            StringBuilder sb = new StringBuilder();
+
             foreach (Auto item in this.autos)
             {
-                Console.WriteLine(Auto.MostrarDatosDelAuto(item));
+                sb.AppendLine(Auto.MostrarDatosDelAuto(item));
             }
+
+            return sb.ToString();
         }
 
-        public void VenderAutosMayoresCincoAnos(Auto autoAVender)
+        public bool FiltrarAutosMayoresCincoAnos(Auto auto, int limite)
         {
             int anoActual = DateTime.Now.Year;
+            bool filtrado = false;
 
-            if ((anoActual-autoAVender.Ano) < 6)
+            if ((anoActual - auto.Ano) <= limite)
             {
-                VenderAuto(autoAVender);
+                filtrado = true;
             }
+            return filtrado;
         }
 
-        public void VenderAutosConRuedasNieve(Auto autoAVender)
+        public string MostrarDatosConcesionaria()
         {
-            if ( autoAVender.TipoDeNieve)
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"Ubicacion: {this.ubicacion}");
+            if (!string.IsNullOrEmpty(this.numeroDeTelefono))
             {
-                VenderAuto(autoAVender);
+                sb.AppendLine($"Numero de Telefono: {this.numeroDeTelefono}");
             }
+            sb.AppendLine($"Capacidad: {this.autos.Count}/{this.capacidadMaximaDeAutos}");
+            sb.AppendLine($"Gerente: {this.nombreDeGerente}{Environment.NewLine}");
+            sb.AppendLine("Lista de Autos");
+            sb.AppendLine(MostrarListaDeAutos());
+
+            return sb.ToString();
         }
     }
 }

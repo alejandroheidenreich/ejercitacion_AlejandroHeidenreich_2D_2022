@@ -47,7 +47,7 @@ namespace Interfaz
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($"Marca: {autoAMostrar.descripcion}"); 
+            sb.Append($"Descripcion: {autoAMostrar.descripcion}"); 
             if (autoAMostrar.importado)
             {
                 sb.AppendLine(" - Importado");
@@ -64,7 +64,10 @@ namespace Interfaz
 
         public static bool operator ==(Auto autoUno, Auto autoDos)
         {
-            return autoUno.descripcion == autoDos.descripcion;
+            return autoUno.descripcion == autoDos.descripcion
+                && autoUno.importado == autoDos.importado
+                && autoUno.ano == autoDos.ano
+                && autoUno.precioBase == autoDos.precioBase;
         }
 
         public static bool operator !=(Auto autoUno, Auto autoDos)
@@ -74,7 +77,7 @@ namespace Interfaz
         public override bool Equals(object obj)
         {
             Auto auto = obj as Auto;
-            return auto != null && (auto.descripcion == this.descripcion);
+            return auto != null && this == auto;
         }
 
         public override int GetHashCode()
