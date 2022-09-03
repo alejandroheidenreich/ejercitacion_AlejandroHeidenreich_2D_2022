@@ -628,7 +628,7 @@ namespace Interfaz
 
 
             Concesionaria sucursalBuenosAires = new Concesionaria(EUbicaicon.Buenos_Aires,15,"Sr. Pepe Peposo");
-            Concesionaria sucursalUshuaia = new Concesionaria(EUbicaicon.Ushuaia, 20, "Sra. Carola Perrosa", "638-0465");
+            Concesionaria sucursalUshuaia = new Concesionaria(EUbicaicon.Ushuaia,20,"Sra. Carola Perrosa","638-0465");
 
             foreach (Auto item in listaAutosVariado)
             {

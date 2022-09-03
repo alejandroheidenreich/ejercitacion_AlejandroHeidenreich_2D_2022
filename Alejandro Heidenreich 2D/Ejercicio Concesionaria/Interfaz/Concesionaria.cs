@@ -12,10 +12,8 @@ namespace Interfaz
     {
         Buenos_Aires, Ushuaia
     }
-
     internal class Concesionaria
     {
-        
         private EUbicaicon ubicacion;
         private int capacidadMaximaDeAutos;
         private string numeroDeTelefono;
@@ -24,7 +22,7 @@ namespace Interfaz
         private string nombreDeGerente;
         private double gananciaDeGerente;
 
-        public Concesionaria()
+        private Concesionaria()
         {
             this.autos = new List<Auto>();
             this.gananciaDeGerente = 0;
