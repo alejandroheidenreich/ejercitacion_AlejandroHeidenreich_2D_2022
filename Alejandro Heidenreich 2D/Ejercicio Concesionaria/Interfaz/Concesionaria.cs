@@ -27,6 +27,8 @@ namespace Interfaz
         public Concesionaria()
         {
             this.autos = new List<Auto>();
+            this.gananciaDeGerente = 0;
+            this.gananciaTotal = 0;
         }
 
         public Concesionaria(EUbicaicon ubicacion, int capacidadMaximaDeAutos, string nombreDeGerente) :this()
@@ -162,12 +164,14 @@ namespace Interfaz
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine($"Ubicacion: {this.ubicacion}");
+            sb.AppendLine($"Ganancia de la Sucursal: {this.gananciaTotal.ToString("0.##")}");
             if (!string.IsNullOrEmpty(this.numeroDeTelefono))
             {
                 sb.AppendLine($"Numero de Telefono: {this.numeroDeTelefono}");
             }
             sb.AppendLine($"Capacidad: {this.autos.Count}/{this.capacidadMaximaDeAutos}");
-            sb.AppendLine($"Gerente: {this.nombreDeGerente}{Environment.NewLine}");
+            sb.AppendLine($"Gerente: {this.nombreDeGerente}");
+            sb.AppendLine($"Ganancia del Gerente: {this.gananciaDeGerente.ToString("0.##")}{Environment.NewLine}");
             sb.AppendLine("Lista de Autos");
             sb.AppendLine(MostrarListaDeAutos());
 

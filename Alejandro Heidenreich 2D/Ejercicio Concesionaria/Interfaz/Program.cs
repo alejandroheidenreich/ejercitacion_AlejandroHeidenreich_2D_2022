@@ -655,7 +655,10 @@ namespace Interfaz
             List<Auto> listaUSH = sucursalUshuaia.Autos;
 
             sucursalBuenosAires.VenderAuto(listaBA[5]);
+            sucursalBuenosAires.VenderAuto(listaBA[7]);
             sucursalUshuaia.VenderAuto(listaUSH[3]);
+            sucursalUshuaia.VenderAuto(listaUSH[11]);
+            sucursalUshuaia.VenderAuto(listaUSH[1]);
 
             Console.WriteLine(sucursalBuenosAires.MostrarDatosConcesionaria()
                             + "**********************************************\n\n"
