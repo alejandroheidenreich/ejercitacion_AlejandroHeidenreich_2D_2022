@@ -27,14 +27,15 @@ namespace Entidades
         
         private bool SetTinta(short tinta)
         {
-            int nuevaTinta = (int)this.tinta + tinta;
+            int resultado = (int)this.tinta + tinta;
             bool exito = false;
 
-            if (nuevaTinta <= CANTIDADTINTAMAXIMA && nuevaTinta >= 0)
+            if (resultado <= CANTIDADTINTAMAXIMA && resultado >= 0)
             {
-                this.tinta = (short)nuevaTinta;
+                this.tinta = (short)resultado;
                 exito = true;
             }
+
             return exito;
         }
         public void Recargar()
@@ -45,19 +46,23 @@ namespace Entidades
         public bool Pintar(short gasto, out string dibujo)
         {
             dibujo = "";
+            bool sePinto = false;
 
-            if (SetTinta(gasto))
+            for (int i = 0; i < gasto*-1; i++)
             {
-                for (int i = 0; i < gasto*-1; i++)
+                if (SetTinta(-1))
                 {
-                     dibujo += "*";
+                    sePinto = true;
+                    dibujo += "*";
                 }
-                return true;
+                else
+                {
+                    break;
+                }
             }
-            else
-            {
-                return false;
-            }
+            
+
+            return sePinto;
         }
     }
 }

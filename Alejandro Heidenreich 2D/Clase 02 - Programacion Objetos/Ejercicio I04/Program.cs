@@ -9,7 +9,7 @@ namespace Ejercicio_I04
         {
 
             Boligrafo boligrafoUno = new Boligrafo(ConsoleColor.Blue, 100);
-            Boligrafo boligrafoDos = new Boligrafo(ConsoleColor.Red, 50);
+            Boligrafo boligrafoDos = new Boligrafo(ConsoleColor.Red, 5);
             string dibujo;
 
             Console.WriteLine($"Color del primer boligrafo: {boligrafoUno.GetColor()}");
@@ -17,10 +17,10 @@ namespace Ejercicio_I04
             Console.WriteLine($"Color del segundo boligrafo: {boligrafoDos.GetColor()}");
             Console.WriteLine($"Nivel de tinta del segundo boligrafo: {boligrafoDos.GetTinta()}");
 
-            boligrafoDos.Recargar();
+            //boligrafoDos.Recargar();
             Console.WriteLine($"Nivel de tinta del segundo boligrafo: {boligrafoDos.GetTinta()}");
 
-            boligrafoUno.Pintar(-10, out dibujo);
+            boligrafoUno.Pintar(-15, out dibujo);
             Console.WriteLine($"Nivel de tinta del primer boligrafo: {boligrafoUno.GetTinta()}");
             Console.ForegroundColor = boligrafoUno.GetColor();
             Console.WriteLine(dibujo);
