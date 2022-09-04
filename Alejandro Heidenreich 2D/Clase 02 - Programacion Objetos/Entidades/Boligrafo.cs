@@ -27,12 +27,12 @@ namespace Entidades
         
         private bool SetTinta(short tinta)
         {
-            int resultado = (int)this.tinta + tinta;
+            int nuevaTinta = (int)this.tinta + tinta;
             bool exito = false;
 
-            if (resultado <= CANTIDADTINTAMAXIMA && resultado >= 0)
+            if (nuevaTinta <= CANTIDADTINTAMAXIMA && nuevaTinta >= 0)
             {
-                this.tinta = (short)resultado;
+                this.tinta = (short)nuevaTinta;
                 exito = true;
             }
             return exito;
