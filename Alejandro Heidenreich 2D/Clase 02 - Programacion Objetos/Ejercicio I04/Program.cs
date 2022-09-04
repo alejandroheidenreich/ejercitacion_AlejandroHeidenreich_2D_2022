@@ -20,14 +20,14 @@ namespace Ejercicio_I04
             boligrafoDos.Recargar();
             Console.WriteLine($"Nivel de tinta del segundo boligrafo: {boligrafoDos.GetTinta()}");
 
-            boligrafoUno.Pintar(10, out dibujo);
+            boligrafoUno.Pintar(-10, out dibujo);
             Console.WriteLine($"Nivel de tinta del primer boligrafo: {boligrafoUno.GetTinta()}");
             Console.ForegroundColor = boligrafoUno.GetColor();
             Console.WriteLine(dibujo);
 
             Console.ForegroundColor = ConsoleColor.White;
 
-            boligrafoDos.Pintar(25, out dibujo);
+            boligrafoDos.Pintar(-25, out dibujo);
             Console.WriteLine($"Nivel de tinta del primer boligrafo: {boligrafoDos.GetTinta()}");
             Console.ForegroundColor = boligrafoDos.GetColor();
             Console.WriteLine(dibujo);

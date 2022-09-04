@@ -25,28 +25,30 @@ namespace Entidades
             return this.tinta;
         }
         
-        private void SetTinta(short tinta)
+        private bool SetTinta(short tinta)
         {
-            if (tinta <= CANTIDADTINTAMAXIMA)
+            int resultado = (int)this.tinta + tinta;
+            bool exito = false;
+
+            if (resultado <= CANTIDADTINTAMAXIMA && resultado >= 0)
             {
-                this.tinta = tinta;
+                this.tinta = (short)resultado;
+                exito = true;
             }
+            return exito;
         }
         public void Recargar()
         {
-            SetTinta(CANTIDADTINTAMAXIMA);
+            this.tinta = CANTIDADTINTAMAXIMA;
         }
+
         public bool Pintar(short gasto, out string dibujo)
         {
-            int restoTinta;
             dibujo = "";
 
-            if (gasto < GetTinta())
+            if (SetTinta(gasto))
             {
-                restoTinta = (int)GetTinta() - gasto;
-
-                this.SetTinta((short)restoTinta);
-                for (int i = 0; i < gasto; i++)
+                for (int i = 0; i < gasto*-1; i++)
                 {
                      dibujo += "*";
                 }
